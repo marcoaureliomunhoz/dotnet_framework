@@ -4,7 +4,7 @@
 
 O .NET Framework é um conjunto de componentes/elementos prontos que simplificam o desenvolvimento e a execução de aplicações.
 
-**Como que funciona:**  
+**Como funciona:**  
  1. **Codificação**: você codifica (código fonte) em uma liguagem criada sobre MSIL.
 2. **Compilação Intermediária**: processa o resultado da codificação através de um dos compiladores disponíveis. O compilador gera um **assembly intermediário** baseado em MSIL/CIL.
 3. **Execução**: o CRL (ambiente de execução) processa e executa (gerencia) o resultado da compilação intermediária. Quando necessário aciona o JIT (just-in-time compiler) para gerar código de máquina ou o GC (garbage collector) para limpar a memória.
