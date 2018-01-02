@@ -11,14 +11,11 @@ O .NET Framework é um conjunto de componentes/elementos prontos que simplificam
 
 **Principais componentes:**
 - **Compilador Intermediário**: processa o código fonte e gera assembly intermediário baseado em MSIL/CIL. 
+    - **csc.exe**: compilador da linguagem C#.
 - **CLR**: gerenciador/ambiente de execução (common language runtime).
 - **JIT**: converte o código MSIL/CIL para o código de máquina correspondente à plataforma (SO) onde a aplicação é executada.
 - **GC**: garbage collector (coletor de lixo).
 - **NET Class Libraries**: conjunto de bibliotecas do framework.
 - **ILDASM**: utilitário para ver o código MSIL/CIL.
 
-**Compiladores Intermediários:**  
-- **csc.exe**: compilador da linguagem C#.
-
 > A conversão do código fonte para MSIL/CIL é feita de acordo com a **Common Language Specification (CLS)** e a **Common Type System (CTS)** que especificam respectivamente um conjunto de funções básicas e um conjunto de tipos básicos que todas as linguagens da plataforma devem suportar.
-
