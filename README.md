@@ -49,24 +49,42 @@ A partir de 2014 a Microsoft começou a trabalhar em uma nova geração do frame
     - **SIMD**: single instruction and multiple data (paralização em nível de CPU/núcleo).
     - **.NET Standard**: novo padrão de definição de bibliotecas para permitir reaproveitamento de código entre plataformas .NET.
 
+**Últimas Versões do .NET Core:**
+
+- 3.1 (LTS - Suporte a Longo Prazo)
+    - Alterações significativas no Windows Forms.
+    - C++/CLI.
+- 3.0
+    - Suporte para Windows Formas e WPF no Windows.
+    - Recursos para C# 8.
+    - Geração de executáveis por padrão.
+    - Vinculação de assembly como medida para reduzir o tamanho final do aplicativo gerado.
+    - A partir da versão 3.0 a compilação em camadas (para otimizações automáticas) vem ativada como padrão.
+    - Formato ReadyToRun (R2R), que é uma forma de compilação antecipada (AOT). Os binários R2R melhoram o desempenho de inicialização reduzindo a quantidade de trabalho que o compilador just-in-time (JIT) precisa fazer à medida que seu aplicativo é carregado. Os binários contêm código nativo similar comparado ao que o JIT produziria.
+    - Agora o build copia as dependências do NuGet para a pasta de saída.
+    - Novas opções global.JSON.
+    - Novo formato de pacote de aplicativos do Windows (MSIX).
+    - Aprimoramentos para Linux.
+    - Suporte de GPIO para Respberry Pi.
+    - Segurança - TLS 1.3 e OpenSSL 1.1.1 no Linux.
+    - Novos recursos para criptografia.
+    - Novos tipos **System.Index** e **System.Range**.
+    - **IAsyncEnumerable<T>** como versão assíncrona de IEnumerable<T>.
+    - Atualização das APIs de ponto flutuante para entrar em conformidade com a revisão IEEE 754-2008.
+    - Suporte nativo ao JSON como alternativa ao Newtonsoft.JSON.
+    - Suporte a HTTP/2.
+- 2.2
+    - Implatanção por meio de **.exe** em vez de arquivos **.dll**.
+    - Classes do tipo evento para obter informações de serivços de runtime como GC, JIT, ThreadPool e interoperabilidade.
+    - Compilação em camadas será ativada mediante consentimento. A compilação em camadas serve para otimizar o código em execução. Em aplicações pequenas esses estágios de otimização podem elevar o tempo em vez de melhorar, por isso se você quiser usar a compilação em camadas precisa configurar/ativar.
+    - Injeção de código antes de executar o método Main (gancho de inicialização).
+
 **.NET Standard:**
 
 O .NET Standard é uma especificação formal de APIs do .NET que devem estar disponíveis em todas as implementações do .NET. A motivação por trás do .NET Standard é estabelecer maior uniformidade no ecossistema do .NET. A ECMA 335 continua a estabelecer a uniformidade de comportamento da implementação do .NET, mas não há especificação semelhante para as BCLs (Bibliotecas de Classe Base) para implementações da biblioteca do .NET.
 
-.NET Standard | 1.0 | 1.1 | 1.2 | 1.3 | 1.4 | 1.5 | 1.6 | 2.0  
---- | --- | --- | --- | --- | --- | --- | --- | ---  
-.NET Core | 1.0 | 1.0 | 1.0 | 1.0 | 1.0 | 1.0 | 1.0 | 2.0  
-.NET Framework | 4.5 | 4.5 | 4.5.1 | 4.6 | 4.6.1 | 4.6.1 | 4.6.1 | 4.6.1  
-Mono | 4.6 | 4.6 | 4.6 | 4.6 | 4.6 | 4.6 | 4.6 | 5.4   
-Xamarin.iOS | 10.0 | 10.0 | 10.0 | 10.0 | 10.0 | 10.0 | 10.0 | 10.14  
-Xamarin.Mac | 3.0 | 3.0 | 3.0 | 3.0 | 3.0 | 3.0 | 3.0 | 3.8  
-Xamarin.Android | 7.0 | 7.0 | 7.0 | 7.0 | 7.0 | 7.0 | 7.0 | 8.0  
-Universal Windows Platform | 10.0 | 10.0 | 10.0 | 10.0 | 10.0 | 10.0.16299 | 10.0.16299 | 10.0.16299  
-Windows | 8.0 | 8.0 | 8.1  
-Windows Phone | 8.1 | 8.1 | 8.1  
-Windows Phone Silverlight | 8.0  
-
 **Referências:**  
+- https://docs.microsoft.com/pt-br/dotnet/core/whats-new/
 - https://github.com/dotnet
 - https://docs.microsoft.com/pt-br/dotnet/
 - https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/versions-and-dependencies
